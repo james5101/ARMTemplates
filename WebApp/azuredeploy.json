@@ -73,7 +73,7 @@
       "name": "[parameters('aseWebAppName')]",
       "type": "Microsoft.Web/sites",
       "location": "[parameters('existingAseLocation')]",
-      "apiVersion": "2015-08-01",
+      "apiVersion": "2016-08-01",
 
       "tags": {
 
