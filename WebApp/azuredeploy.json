@@ -1,0 +1,92 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+
+    "aseWebAppName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of Web App that resides in the ASE"
+      }
+    },
+
+    "existingServerFarmId": {
+      "type": "string",
+      "metadata": {
+        "description": "ResourceId of ServerFarmID (App Service Plan)"
+      }
+    },
+
+    "existingHostEnviornamentName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of ASE"
+      }
+    },
+
+    "existingHostEnviornamentId": {
+      "type": "string",
+      "metadata": {
+        "description": "ResourceId of ASE "
+      }
+    },
+
+
+
+    "existingAseLocation": {
+      "type": "string",
+      "allowedValues": [
+        "Central US",
+        "East US",
+        "East US 2",
+        "North Central US",
+        "South Central US",
+        "West US",
+        "Canada Central",
+        "North Europe",
+        "West Europe",
+        "East Asia",
+        "Southeast Asia",
+        "Japan East",
+        "Japan West",
+        "Brazil South",
+        "Australia East",
+        "Australia Southeast",
+        "West India",
+        "Central India",
+        "South India"
+      ],
+      "metadata": {
+        "description": "Location of the App Service Environment"
+      }
+    }
+
+
+
+
+  },
+  "variables": {
+
+  },
+  "resources": [
+    {
+      "name": "[parameters('aseWebAppName')]",
+      "type": "Microsoft.Web/sites",
+      "location": "[parameters('existingAseLocation')]",
+      "apiVersion": "2015-08-01",
+
+      "tags": {
+
+        "displayName": "ASE-WEB-APP"
+      },
+      "properties": {
+        "name": "[parameters('aseWebAppName')]",
+        "serverFarmId": "[parameters('existingServerFarmId')]",
+        "hostingEnvironment": "[parameters('existingHostEnviornamentName')]",
+        "hostingEnvironmentId": "[parameters('existingHostEnviornamentId')]"
+      }
+    }
+  ],
+  "outputs": {
+  }
+}
