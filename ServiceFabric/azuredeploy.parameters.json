@@ -1,0 +1,153 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "clusterName": {
+      "value": "sf-jamestest"
+    },
+
+    "adminUsername": {
+      "value": "localadmin"
+    },
+
+    "vmImageOffer": {
+      "value": "WindowsServer"
+    },
+
+    "vmImagePublisher": {
+      "value": "MicrosoftWindowsServer"
+    },
+
+    "vmImageSku": {
+      "value": "2016-Datacenter"
+    },
+
+    "adminPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/subId/resourceGroups/KeyVault/providers/Microsoft.KeyVault/vaults/KeyVault"
+        },
+        "secretName": "secretName"
+      }
+    },
+
+    "dataDiskStorageAccountType": {
+      "value": "Standard_LRS"
+
+    },
+
+    "dataDiskSizeGb": {
+      "value": 64
+    },
+
+
+    "certificateThumbprint": {
+      "value": " "
+    },
+
+    "sourceVaultResourceId": {
+      "value": " "
+    },
+
+    "certificateUrlValue": {
+      "value": " "
+    },
+
+    "subnet0Prefix": {
+      "value": "10.0.0.0/24"
+    },
+
+    "subnet1Prefix": {
+      "value": "10.0.0.0/24"
+    },
+
+    "existingSubnetNameNt0": {
+      "value": "subnet1"
+
+    },
+    "existingSubnetNameNt1": {
+      "value": "subnet2"
+
+    },
+
+    "existingVNetName": {
+      "value": "network-vnet"
+
+    },
+    "existingVNetRGName": {
+      "value": "network-rg"
+    },
+
+    "nodeType0Size": {
+      "value": "Standard_D2_v2"
+    },
+    "vmNodeType0dotNet": {
+      "value": "dotNet"
+    },
+    "vmNodeType1dotNet": {
+      "value": "dotNetCore"
+    },
+
+    "vmNodeType0Role": {
+      "value": "FrontEnd"
+    },
+    "vmNodeType1Role": {
+      "value": "BackEnd"
+    },
+
+
+    "nodeType1Size": {
+      "value": "Standard_D2_v2"
+    },
+
+    "nodeDataDrive": {
+      "value": "D:\\SvcFab"
+    },
+
+    "nodeInstanceCount": {
+      "value": 3
+    },
+
+    "vmNodeType0Name": {
+      "value": "sf-fe-s"
+    },
+
+    "vmNodeType1Name": {
+      "value": "sf-be-s"
+    },
+
+
+    "applicationInsightsKey": {
+      "value": " "
+    },
+
+    "reliabilityLevel": {
+      "value": "Bronze"
+    },
+
+    "durabilityLevel": {
+      "value": "Bronze"
+    },
+
+    "tenantId": {
+      "value": " "
+    },
+
+    "clusterApplication": {
+      "value": " "
+    },
+
+    "clientApplication": {
+      "value": " "
+    },
+
+    "supportLogStorageAccountName": {
+      "value": "hdsgfkjdhs"
+    },
+
+    "applicationDiagnosticsStorageAccountName": {
+      "value": "shgfkjs"
+    }
+
+  }
+}
