@@ -7,13 +7,13 @@
       "value": "myinternalwebapp4"
     },
     "existingServerFarmId": {
-      "value": "/subscriptions/4489d90d-9ec6-4bc5-b988-d85176137426/resourceGroups/myinternalapp-rg/providers/Microsoft.Web/serverfarms/myinternalapp"
+      "value": "/subscriptions/4489d90d-9ec6-4bc5-b988-d85176137426/internalapp"
     },
     "existingHostEnviornamentName": {
       "value": "my-ase-waf"
     },
     "existingHostEnviornamentId": {
-      "value": "/subscriptions/4489d90d-9ec6-4bc5-b988-d85176137426/resourceGroups/vnet-rg/providers/Microsoft.Web/hostingEnvironments/my-ase-waf"
+      "value": "/subscriptions/4489d90d-9ec6-4bc5-b988-d85176137426/"
     },
     "existingAseLocation": {
       "value": "East US"
